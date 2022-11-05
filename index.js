@@ -20,7 +20,7 @@ inquirer.prompt([
     fs.writeFileSync("./dist/README.md",`
 # ${answers.title}
 
-* Descrioption
+* Description
 it does stuff    
 `)
 })
