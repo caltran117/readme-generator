@@ -1,12 +1,12 @@
 
-# aasdf
+# read me generator
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/caltran117/readme-generator)
 
 
 ## Description
 
-wet
+create a read me generator
 ## Table of Contents 
 
 * [Installation](#installation)
@@ -22,21 +22,21 @@ wet
 * [Questions](#questions)
 
 ## Installation
-dfh
+none
 
 ## Usage
-asdg
+easily create a read me after a series of questions
 
 ## License
 MIT
 
 ## Contributing
-ehrdh
+Calvin and Bob
 
 ## Tests
-vc
+run it in terminal
 
 ## Questions
-cv
-https://github.com/drf
-if you have any questions you can email me at fd
+no
+https://github.com/caltran117
+if you have any questions you can email me at caltran117@gmail.com
