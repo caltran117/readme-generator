@@ -17,38 +17,51 @@ inquirer.prompt([
 
     },
     {
-        name:"Installation",
+        name:"installation",
         message:"What are installation instruction for this program?",
         type:"input",
 
     },
     {
-        name:"Usage",
+        name:"usage",
         message:"What are the uses of this program?",
         type:"input",
 
     },
     {
-        name:"License",
-        message:"What license does this project use, if any?",
-        type:"input",
+        name:"license",
+        message:"What license does this project use, if any? ",
+        type:"list",
+        choices: ["MIT","PGN", "GH", "NONE"]
 
     },
     {
-        name:"Contributing",
+        name:"contributing",
         message:"List any contribution guidelines.",
         type:"input",
 
     },
     {
-        name:"Tests",
+        name:"tests",
         message:"How do you run test for this program, if any?",
         type:"input",
 
     },
     {
-        name:"Questions",
+        name:"questions",
         message:"Anything else?",
+        type:"input",
+
+    },
+    {
+        name:"github",
+        message:"What is your GitHub username?",
+        type:"input",
+
+    },
+    {
+        name:"email",
+        message:"What is your email?",
         type:"input",
 
     },
@@ -56,10 +69,45 @@ inquirer.prompt([
     fs.writeFileSync("./dist/README.md",`
 # ${answers.title}
 
+[![GitHub license](https://img.shields.io/badge/license-${answers.license}-blue.svg)](https://github.com/caltran117/readme-generator)
+
+
 ## Description
+
 ${answers.description}
+## Table of Contents 
 
+* [Installation](#installation)
 
+* [Usage](#usage)
+
+* [License](#license)
+
+* [Contributing](#contributing)
+
+* [Tests](#tests)
+
+* [Questions](#questions)
+
+## Installation
+${answers.installation}
+
+## Usage
+${answers.usage}
+
+## License
+${answers.license}
+
+## Contributing
+${answers.contributing}
+
+## Tests
+${answers.tests}
+
+## Questions
+${answers.questions}
+https://github.com/${answers.github}
+if you have any questions you can email me at ${answers.email}
 `)
 })
 // TODO: Create a function to write README file
