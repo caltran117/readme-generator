@@ -16,12 +16,50 @@ inquirer.prompt([
         type:"input",
 
     },
+    {
+        name:"Installation",
+        message:"What are installation instruction for this program?",
+        type:"input",
+
+    },
+    {
+        name:"Usage",
+        message:"What are the uses of this program?",
+        type:"input",
+
+    },
+    {
+        name:"License",
+        message:"What license does this project use, if any?",
+        type:"input",
+
+    },
+    {
+        name:"Contributing",
+        message:"List any contribution guidelines.",
+        type:"input",
+
+    },
+    {
+        name:"Tests",
+        message:"How do you run test for this program, if any?",
+        type:"input",
+
+    },
+    {
+        name:"Questions",
+        message:"Anything else?",
+        type:"input",
+
+    },
 ]).then(answers=>{
     fs.writeFileSync("./dist/README.md",`
 # ${answers.title}
 
-* Description
-it does stuff    
+## Description
+${answers.description}
+
+
 `)
 })
 // TODO: Create a function to write README file
